@@ -20,14 +20,13 @@ var webpackConfig = {
   ],
 
   module: {
-    loaders: [
-      // .ts files for TypeScript
-      { test: /\.ts$/, loaders: ['awesome-typescript-loader', 'angular2-template-loader'] },
-      { test: /\.css$/, loaders: ['to-string-loader', 'css-loader'] },
-      { test: /\.html$/, loader: 'raw-loader' },
-      { test: /\.json$/, loader: 'json-loader' },
-
-    ]
+loaders: [
+  // .ts files for TypeScript
+  { test: /\.ts$/, loaders: ['awesome-typescript-loader', 'angular2-template-loader'] },
+  { test: /\.css$/, loaders: ['to-string-loader', 'css-loader'] },
+  { test: /\.html$/, loader: 'raw-loader' },
+  { test: /\.json$/, loader: 'json-loader' },
+]
   }
 
 };
