@@ -384,7 +384,10 @@ html .clear-completed:active {
 	}
 }
 `],
-  directives:[TodolistHeaderComponent, TodolistFooterComponent],
+  directives:[
+    TodolistHeaderComponent,
+    TodolistFooterComponent
+  ],
   template: `
    
    <!--App-->
@@ -396,8 +399,7 @@ html .clear-completed:active {
   <section class="main">
 
     <!-- Toggle-->
-    <input class="toggle-all"
-           type="checkbox">
+    <input class="toggle-all" type="checkbox">
 
     <!-- List -->
     <ul class="todo-list">
@@ -406,8 +408,7 @@ html .clear-completed:active {
       <li>
 
         <div class="view">
-          <input class="toggle"
-                 type="checkbox">
+          <input class="toggle" type="checkbox">
 
           <label>Todo Tittle</label>
 
