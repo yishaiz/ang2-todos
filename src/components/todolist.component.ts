@@ -1,4 +1,7 @@
 import {Component, ViewEncapsulation} from '@angular/core';
+import {TodolistFooterComponent} from "./todolist-footer.component";
+import {TodolistHeaderComponent} from "./todolist-header.component";
+
 
 @Component({
   selector: 'todo-list',
@@ -381,23 +384,14 @@ html .clear-completed:active {
 	}
 }
 `],
+  directives:[TodolistHeaderComponent, TodolistFooterComponent],
   template: `
    
    <!--App-->
 <section class="todoapp">
 
-  <!--Header-->
-  <header class="header">
-
-    <!-- Header Title-->
-    <h1>todos</h1>
-
-    <!--Header Form-->
-    <input class="new-todo"
-           placeholder="What needs to be done?"
-           autofocus>
-  </header>
-
+  <todo-list-header></todo-list-header>
+  
   <!-- Content -->
   <section class="main">
 
@@ -466,16 +460,8 @@ html .clear-completed:active {
   </section>
   <!-- /Content-->
 
-  <!--Footer-->
-  <footer class="footer">
-    <span class="todo-count">
-      <strong>1</strong>
-      item left
-    </span>
-    <button class="clear-completed">Clear completed</button>
-  </footer>
-  <!--End Footer-->
-
+ <todo-list-footer></todo-list-footer>
+ 
 </section>
 <!--/App-->
     `
