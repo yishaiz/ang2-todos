@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, ViewEncapsulation} from '@angular/core';
 
 @Component({
   selector: 'todo-list',
@@ -478,7 +478,10 @@ html .clear-completed:active {
 
 </section>
 <!--/App-->
-    `,
+    `
+  ,
+  encapsulation: ViewEncapsulation.None
+
 })
 
 export class TodolistComponent {}
