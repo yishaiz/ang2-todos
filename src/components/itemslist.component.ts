@@ -1,18 +1,24 @@
 import {Component, ViewEncapsulation} from '@angular/core';
+import {TodoItemComponent} from "./item.component";
 
 
 @Component({
   selector: 'todo-items-list',
   styles:[ ],
   directives:[
+    TodoItemComponent
   ],
   template: `
     
     <!-- List -->
     <ul class="todo-list">
 
+      <todo-item></todo-item>
+      <todo-item></todo-item>
+      <todo-item></todo-item>
+
       <!-- Item -->
-      <li>
+     <!-- <li>
 
         <div class="view">
           <input class="toggle" type="checkbox">
@@ -27,7 +33,7 @@ import {Component, ViewEncapsulation} from '@angular/core';
 
       </li>
 
-      <!-- Completed -->
+      &lt;!&ndash; Completed &ndash;&gt;
       <li class="completed">
 
         <div class="view">
@@ -45,7 +51,7 @@ import {Component, ViewEncapsulation} from '@angular/core';
 
       </li>
 
-      <!-- Editing Item -->
+      &lt;!&ndash; Editing Item &ndash;&gt;
       <li class="editing">
 
         <div class="view">
@@ -61,8 +67,12 @@ import {Component, ViewEncapsulation} from '@angular/core';
         <input class="edit">
 
       </li>
-
+-->
       <!-- /Item-->
+      
+      
+      
+      
     </ul>
     <!-- /List-->
    
