@@ -3,19 +3,18 @@ import {Component, ViewEncapsulation} from '@angular/core';
 
 @Component({
   selector: 'todo-item',
-  styles:[ ],
-  directives:[
-  ],
+  styles: [],
+  directives: [],
   template: `
     
      
       <!-- Item -->
-      <li>
+      <li class="{{task.completed ? 'completed' : ''}}">
 
         <div class="view">
           <input class="toggle" type="checkbox">
 
-          <label>Todo Tittle</label>
+          <label>{{task.name}}</label>
 
           <button class="destroy"></button>
 
@@ -40,4 +39,10 @@ import {Component, ViewEncapsulation} from '@angular/core';
 
 })
 
-export class TodoItemComponent {}
+export class TodoItemComponent {
+  public task = {
+    name: 'task 1',
+    date: '2016-07-01',
+    completed: false
+  };
+}

@@ -82,4 +82,24 @@ import {TodoItemComponent} from "./item.component";
 
 })
 
-export class TodoItemListComponent {}
+export class TodoItemListComponent {
+
+/*  public tasks= [
+    {
+      name: 'task 1',
+      date: '2016-07-01',
+      completed:false
+    },{
+      name: 'task 2',
+      date: '2016-08-01',
+      completed:false
+    },{
+      name: 'task 3',
+      date: '2016-09-01',
+      completed:true
+    },
+  ]
+  ;*/
+
+
+}
