@@ -1,7 +1,7 @@
 import {Component, ViewEncapsulation} from '@angular/core';
 import {TodolistFooterComponent} from "./todolist-footer.component";
 import {TodolistHeaderComponent} from "./todolist-header.component";
-
+import {TodoItemListComponent} from "./itemslist.component";
 
 @Component({
   selector: 'todo-list',
@@ -386,85 +386,26 @@ html .clear-completed:active {
 `],
   directives:[
     TodolistHeaderComponent,
-    TodolistFooterComponent
+    TodolistFooterComponent,
+    TodoItemListComponent
   ],
   template: `
    
-   <!--App-->
 <section class="todoapp">
 
   <todo-list-header></todo-list-header>
   
-  <!-- Content -->
   <section class="main">
 
-    <!-- Toggle-->
     <input class="toggle-all" type="checkbox">
 
-    <!-- List -->
-    <ul class="todo-list">
+    <todo-items-list></todo-items-list>
 
-      <!-- Item -->
-      <li>
-
-        <div class="view">
-          <input class="toggle" type="checkbox">
-
-          <label>Todo Tittle</label>
-
-          <button class="destroy"></button>
-
-        </div>
-
-        <input class="edit">
-
-      </li>
-
-      <!-- Completed -->
-      <li class="completed">
-
-        <div class="view">
-          <input class="toggle"
-                 type="checkbox"
-                 checked>
-
-          <label>Todo Tittle</label>
-
-          <button class="destroy"></button>
-
-        </div>
-
-        <input class="edit">
-
-      </li>
-
-      <!-- Editing Item -->
-      <li class="editing">
-
-        <div class="view">
-          <input class="toggle"
-                 type="checkbox">
-
-          <label>Todo Tittle</label>
-
-          <button class="destroy"></button>
-
-        </div>
-
-        <input class="edit">
-
-      </li>
-
-      <!-- /Item-->
-    </ul>
-    <!-- /List-->
   </section>
-  <!-- /Content-->
 
  <todo-list-footer></todo-list-footer>
  
 </section>
-<!--/App-->
     `
   ,
   encapsulation: ViewEncapsulation.None
