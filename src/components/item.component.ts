@@ -1,5 +1,10 @@
 import {Component, ViewEncapsulation} from '@angular/core';
 
+interface Task {
+  name: string,
+  date: Date,
+  completed: boolean
+}
 
 @Component({
   selector: 'todo-item',
@@ -40,8 +45,8 @@ import {Component, ViewEncapsulation} from '@angular/core';
 })
 
 export class TodoItemComponent {
-  public task = {
-    name: 'task 1',
+  public task : Task = <Task>{
+    name: 'task 1 ',
     date: '2016-07-01',
     completed: false
   };

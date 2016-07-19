@@ -13,11 +13,13 @@ import {TodoItemComponent} from "./item.component";
     <!-- List -->
     <ul class="todo-list">
 
-      <todo-item></todo-item>
-      <todo-item></todo-item>
-      <todo-item></todo-item>
+      <!--<todo-item></todo-item>-->
+      <!--<todo-item></todo-item>-->
+      <!--<todo-item></todo-item>-->
 
-
+<li *ngFor="let task of tasks">
+  <todo-item ...></todo-item>
+</li>
 
       <!-- Item -->
      <!-- <li>
