@@ -15,31 +15,18 @@ import {Component, Input, ViewEncapsulation} from '@angular/core';
   directives: [],
   template: `
     
-     
-      <!-- Item -->
-      <!--<li class="{{task.completed ? 'completed' : ''}}">-->
-
+ 
         <div class="view">
-          <input class="toggle" type="checkbox">
-
+          
           <label>{{task.name}}</label>
 
           <button class="destroy"></button>
 
         </div>
-
-        <input class="edit">
-
-      <!--</li>-->
-
-      <!-- Completed -->
-      <!--<li class="completed">-->
-
-<!--
-          <input class="toggle"
-                 type="checkbox"
-                 checked>
--->
+    
+      <input *ngIf="!task.completed"  class="toggle"
+             type="checkbox"
+             [checked]="task.checked">
      
     `
   ,

@@ -50,15 +50,18 @@ export class TodoItemListComponent {
     {
       name: 'task 1 - build angular 2',
       date: '2016-07-01',
-      completed: false
+      completed: false,
+      checked : true
     }, {
       name: 'task 2 - services',
       date: '2016-08-01',
-      completed: false
+      completed: false,
+      checked : false
     }, {
       name: 'task 3 - forms',
       date: '2016-09-01',
-      completed: true
+      completed: true,
+      checked : true
     },
   ];
 
