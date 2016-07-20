@@ -1,13 +1,16 @@
-import {Component, ViewEncapsulation} from '@angular/core';
+import {Component, Input, ViewEncapsulation} from '@angular/core';
 
-interface Task {
+/*interface Task {
   name: string,
   date: Date,
   completed: boolean
-}
+}*/
+
+// @Input ()
 
 @Component({
   selector: 'todo-item',
+  // inputs:[task],
   styles: [],
   directives: [],
   template: `
@@ -45,9 +48,14 @@ interface Task {
 })
 
 export class TodoItemComponent {
-  public task : Task = <Task>{
+
+  //Task = <Task>{
+
+  @Input() task;
+
+  public task1 = {
     name: 'task 1 ',
-    date: '2016-07-01',
+    date1: '2016-07-01',
     completed: false
   };
 }

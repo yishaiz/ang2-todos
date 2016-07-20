@@ -13,9 +13,9 @@ import {TodoItemComponent} from "./item.component";
     <!-- List -->
     <ul class="todo-list">
 
-      <todo-item></todo-item>
-      <todo-item></todo-item>
-      <todo-item></todo-item>
+      <todo-item [task]="task"></todo-item>
+      <!--<todo-item ></todo-item>-->
+      <!--<todo-item></todo-item>-->
 
 
 
@@ -85,6 +85,13 @@ import {TodoItemComponent} from "./item.component";
 })
 
 export class TodoItemListComponent {
+
+
+public task = {
+  name: 'task 1-from parent component ',
+  date1: '2016-07-01',
+  completed: true
+};
 
   public tasks = [
     {
