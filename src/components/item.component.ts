@@ -17,7 +17,7 @@ import {Component, Input, ViewEncapsulation} from '@angular/core';
     
      
       <!-- Item -->
-      <li class="{{task.completed ? 'completed' : ''}}">
+      <!--<li class="{{task.completed ? 'completed' : ''}}">-->
 
         <div class="view">
           <input class="toggle" type="checkbox">
@@ -30,7 +30,7 @@ import {Component, Input, ViewEncapsulation} from '@angular/core';
 
         <input class="edit">
 
-      </li>
+      <!--</li>-->
 
       <!-- Completed -->
       <!--<li class="completed">-->

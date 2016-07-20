@@ -10,73 +10,26 @@ import {TodoItemComponent} from "./item.component";
   ],
   template: `
     
-    <!-- List -->
     <ul class="todo-list">
 
-      <todo-item [task]="task"></todo-item>
-      <!--<todo-item ></todo-item>-->
-      <!--<todo-item></todo-item>-->
-
-
-
-      <!-- Item -->
-     <!-- <li>
-
-        <div class="view">
-          <input class="toggle" type="checkbox">
-
-          <label>Todo Tittle</label>
-
-          <button class="destroy"></button>
-
-        </div>
-
-        <input class="edit">
-
-      </li>
-
-      &lt;!&ndash; Completed &ndash;&gt;
-      <li class="completed">
-
-        <div class="view">
-          <input class="toggle"
-                 type="checkbox"
-                 checked>
-
-          <label>Todo Tittle</label>
-
-          <button class="destroy"></button>
-
-        </div>
-
-        <input class="edit">
-
-      </li>
-
-      &lt;!&ndash; Editing Item &ndash;&gt;
-      <li class="editing">
-
-        <div class="view">
-          <input class="toggle"
-                 type="checkbox">
-
-          <label>Todo Tittle</label>
-
-          <button class="destroy"></button>
-
-        </div>
-
-        <input class="edit">
-
-      </li>
--->
-      <!-- /Item-->
+      <!--<todo-item [task]="task"></todo-item>-->
       
-      
-      
-      
+      <!--<li *ngFor="let task of tasks; let i=index" [task]="task"  class="{{task.completed ? 'completed' : ''}}">-->
+<li *ngFor="let task of tasks; let i=index" 
+     class="{{task.completed ? 'completed' : ''}}">
+        {{i}} : {{task.name}}
+</li>
+
+<hr/>
+
+<li *ngFor="let task of tasks; let i=index" 
+     class="{{task.completed ? 'completed' : ''}}">
+        <todo-item [task]="task"> </todo-item>
+</li>
+
+
+
     </ul>
-    <!-- /List-->
    
     `
   ,
@@ -87,11 +40,11 @@ import {TodoItemComponent} from "./item.component";
 export class TodoItemListComponent {
 
 
-public task = {
-  name: 'task 1-from parent component ',
-  date1: '2016-07-01',
-  completed: true
-};
+  public task = {
+    name: 'task 1-from parent component ',
+    date1: '2016-07-01',
+    completed: true
+  };
 
   public tasks = [
     {
@@ -107,6 +60,6 @@ public task = {
       date: '2016-09-01',
       completed: true
     },
-  ] ;
+  ];
 
 }
