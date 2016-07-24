@@ -1,5 +1,6 @@
 import {Component, ViewEncapsulation} from '@angular/core';
 import {TodoItemComponent} from "./item.component";
+import {Task} from "./Task";
 
 
 @Component({
@@ -12,9 +13,6 @@ import {TodoItemComponent} from "./item.component";
     
     <ul class="todo-list">
 
-      <!--<todo-item [task]="task"></todo-item>-->
-      
-      <!--<li *ngFor="let task of tasks; let i=index" [task]="task"  class="{{task.completed ? 'completed' : ''}}">-->
 <li *ngFor="let task of tasks; let i=index" 
      class="{{task.completed ? 'completed' : ''}}">
         {{i}} : {{task.name}}
@@ -39,30 +37,35 @@ import {TodoItemComponent} from "./item.component";
 
 export class TodoItemListComponent {
 
+/*
 
   public task = {
     name: 'task 1-from parent component ',
     date1: '2016-07-01',
-    completed: true
+    completed:  true
   };
+*/
 
-  public tasks = [
-    {
+  public tasks :Task[] = [
+   <Task> {
       name: 'task 1 - build angular 2',
-      date: '2016-07-01',
+      // date: '2016-07-01',
+      date: new Date(),
       completed: false,
-      checked : true
-    }, {
-      name: 'task 2 - services',
-      date: '2016-08-01',
-      completed: false,
-      checked : false
-    }, {
-      name: 'task 3 - forms',
-      date: '2016-09-01',
-      completed: true,
       checked : true
     },
+    <Task> {
+      name: 'task 2 - services',
+      date: new Date(), //add month -1
+      completed: false,
+      checked : false
+    },
+    <Task> {
+      name: 'task 3 - forms',
+      date: new Date(), //add month -2
+      completed: true,
+      checked : true
+    }
   ];
 
 }

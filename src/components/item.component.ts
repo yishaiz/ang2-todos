@@ -1,20 +1,11 @@
 import {Component, Input, ViewEncapsulation} from '@angular/core';
-
-/*interface Task {
-  name: string,
-  date: Date,
-  completed: boolean
-}*/
-
-// @Input ()
+import {Task} from './Task';
 
 @Component({
   selector: 'todo-item',
-  // inputs:[task],
   styles: [],
   directives: [],
   template: `
-    
  
         <div class="view">
           
@@ -27,7 +18,6 @@ import {Component, Input, ViewEncapsulation} from '@angular/core';
       <input *ngIf="!task.completed"  class="toggle"
              type="checkbox"
              [checked]="task.checked">
-     
     `
   ,
   encapsulation: ViewEncapsulation.None
@@ -36,13 +26,12 @@ import {Component, Input, ViewEncapsulation} from '@angular/core';
 
 export class TodoItemComponent {
 
-  //Task = <Task>{
 
-  @Input() task;
-
-  public task1 = {
-    name: 'task 1 ',
-    date1: '2016-07-01',
-    completed: false
-  };
+  @Input() task:Task
+  /*
+   public task1 = {
+   name: 'task 1 ',
+   date1: '2016-07-01',
+   completed: false
+   };*/
 }
