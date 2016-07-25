@@ -10,6 +10,7 @@ import {Task} from './Task';
         <div class="view">
           
           <label>{{task.name}}</label>
+          <!--<label>{{task.date}}</label>-->
 
           <button class="destroy"></button>
 
@@ -27,7 +28,7 @@ import {Task} from './Task';
 export class TodoItemComponent {
 
 
-  @Input() task:Task
+  @Input() task: Task
   /*
    public task1 = {
    name: 'task 1 ',
